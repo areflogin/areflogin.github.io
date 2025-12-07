@@ -10,49 +10,28 @@
       --bg:#f6f8fb;
       --card:#ffffff;
       --accent:#6b8ef0;
-      --text:#0f1724; /* متن پررنگ و واضح */
+      --text:#000000; /* تمام متن‌ها سیاه */
+      --glass: rgba(99,102,241,0.08);
     }
     *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:var(--bg);color:var(--text);line-height:1.6}
     .wrap{max-width:980px;margin:36px auto;padding:20px}
     header{display:flex;gap:18px;align-items:center}
-    .avatar{
-      width:96px;height:96px;border-radius:14px;
-      background:linear-gradient(135deg,var(--accent),transparent);
-      display:flex;align-items:center;justify-content:center;
-      font-weight:700;color:#ffffff;
-    }
-    h1{margin:0;font-size:1.6rem;color:var(--text)}
-    p.lead{margin:6px 0 0;color:var(--text)}
+    .avatar{width:96px;height:96px;border-radius:14px;background:linear-gradient(135deg,var(--glass),transparent);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    h1{margin:0;font-size:1.6rem;color:var(--text); font-weight:700;}
+    p.lead{margin:6px 0 0;color:var(--text); font-weight:600;}
     nav.toc{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
-    nav.toc a{
-      background:rgba(107,142,240,0.1);
-      padding:8px 12px;
-      border-radius:999px;
-      text-decoration:none;
-      color:var(--text);
-      font-size:0.95rem;
-      font-weight:600;
-    }
+    nav.toc a{background:rgba(0,0,0,0.04);padding:8px 12px;border-radius:999px;text-decoration:none;color:var(--text);font-size:0.95rem; font-weight:600;}
+
     .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:20px}
-    .card{
-      background:var(--card);
-      padding:18px;
-      border-radius:12px;
-      box-shadow:0 6px 18px rgba(15,23,36,0.06);
-      border:1px solid rgba(15,23,36,0.03);
-      color:var(--text);
-    }
-    h2{margin-top:0;color:var(--accent);font-size:1.05rem}
-    ul{margin:8px 0 0;padding-left:18px;color:var(--text)}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,36,0.06);border:1px solid rgba(15,23,36,0.03)}
+    h2{margin-top:0;color:var(--accent);font-size:1.05rem; font-weight:700;}
+    ul{margin:8px 0 0;padding-left:18px; color:var(--text);}
+    li{margin-bottom:4px;}
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    pre{background:#0b1220;color:#e6eef6;padding:12px;border-radius:8px;overflow:auto}
     footer{margin-top:22px;text-align:center;color:var(--text);font-size:0.9rem}
+
     @media (max-width:800px){.two-col{grid-template-columns:1fr}}
   </style>
 </head>
@@ -63,7 +42,7 @@
       <div>
         <h1>Aref Yelghi</h1>
         <p class="lead">Data Analyst • Machine Learning & Optimization • FinTech</p>
-        <div>Persian • Turkish • English</div>
+        <div style="color:var(--text); font-weight:600;">Persian • Turkish • English</div>
       </div>
     </header>
 
@@ -80,7 +59,9 @@
     <div class="grid">
       <section id="summary" class="card">
         <h2>Summary</h2>
-        <p>I am a data analyst and machine learning expert with extensive experience in machine learning and financial technology (fintech). I have developed numerous models to improve accuracy and efficiency in data analysis. My expertise includes designing and implementing optimization algorithms, developing and training deep neural networks for image recognition, and analyzing complex financial datasets. My strong background in machine learning, optimization, and fintech enables me to contribute effectively to research and applied projects.</p>
+        <p>
+          I am a data analyst and machine learning expert with extensive experience in machine learning and financial technology (fintech). Over the years, I have developed numerous models to improve the accuracy and efficiency of data analysis. My areas of expertise include the design and implementation of optimization algorithms, the development and training of deep neural networks for image recognition tasks, and the analysis of complex financial data. My strong background in machine learning, optimization, and fintech enables me to make valuable contributions to research and applied projects.
+        </p>
       </section>
 
       <section id="education" class="card">
@@ -128,7 +109,7 @@
       </section>
 
       <section id="awards" class="card">
-        <h2>Honors & Awards</h2>
+        <h2>Honors &amp; Awards</h2>
         <ul>
           <li>Google Research Grant – Eczema.app (2025)</li>
           <li>Full Scholarship from Turkey (2013–2018)</li>
@@ -204,9 +185,9 @@
 
       <section id="contact" class="card">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:arefyelghi@topkapi.edu.tr">arefyelghi@topkapi.edu.tr</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/aref-yelghi-75b02997" target="_blank">Visit my LinkedIn profile</a></p>
-        <p>Google Scholar: <a href="https://scholar.google.com/citations?user=XhsmWO4AAAAJ&hl=en" target="_blank">Visit my Google Scholar profile</a></p>
+        <p>Email: <a href="mailto:arefyelghi@topkapi.edu.tr" style="color:#000000; font-weight:600;">arefyelghi@topkapi.edu.tr</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/aref-yelghi-75b02997" target="_blank" style="color:#000000; font-weight:600;">Visit my LinkedIn profile</a></p>
+        <p>Google Scholar: <a href="https://scholar.google.com/citations?user=XhsmWO4AAAAJ&hl=en" target="_blank" style="color:#000000; font-weight:600;">View my Google Scholar</a></p>
         <p>Location: Türkiye</p>
       </section>
 
