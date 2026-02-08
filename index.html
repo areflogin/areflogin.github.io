@@ -22,7 +22,6 @@
     p.lead{margin:6px 0 0;color:var(--text); font-weight:600;}
     nav.toc{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
     nav.toc a{background:rgba(0,0,0,0.04);padding:8px 12px;border-radius:999px;text-decoration:none;color:var(--text);font-size:0.95rem; font-weight:600;}
-
     .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:20px}
     .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,36,0.06);border:1px solid rgba(15,23,36,0.03)}
     h2{margin-top:0;color:var(--accent);font-size:1.05rem; font-weight:700;}
@@ -31,23 +30,23 @@
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     pre{background:#0b1220;color:#e6eef6;padding:12px;border-radius:8px;overflow:auto}
     footer{margin-top:22px;text-align:center;color:var(--text);font-size:0.9rem}
-
     @media (max-width:800px){.two-col{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <div class="wrap">
+    <!-- Header -->
     <header>
       <div class="avatar">
         <img src="profile.jpg" alt="Aref Yelghi" style="width:100%; height:100%; border-radius:14px; object-fit:cover;">
       </div>
-
       <div>
         <h1>Aref Yelghi</h1>
         <p class="lead">Data Analyst • Machine Learning & Optimization • FinTech</p>
       </div>
     </header>
 
+    <!-- Navigation -->
     <nav class="toc">
       <a href="#summary">Summary</a>
       <a href="#education">Education</a>
@@ -56,27 +55,32 @@
       <a href="#skills">Skills & Certificates</a>
       <a href="#courses">Courses</a>
       <a href="#languages">Languages</a>
+      <a href="#awards">Honors</a>
+      <a href="#sports">Sports</a>
       <a href="#contact">Contact</a>
     </nav>
 
     <div class="grid">
+      <!-- Summary -->
       <section id="summary" class="card">
         <h2>Summary</h2>
         <p>
-          I am a data analyst and machine learning expert with extensive experience in machine learning and financial technology (fintech). Over the years, I have developed numerous models to improve the accuracy and efficiency of data analysis. My areas of expertise include the design and implementation of optimization algorithms, the development and training of deep neural networks for image recognition tasks, and the analysis of complex financial data. My strong background in machine learning, optimization, and fintech enables me to make valuable contributions to research and applied projects.
+          I am a data analyst and machine learning expert with extensive experience in financial technology (FinTech) and optimization. I have developed numerous predictive models, deep neural networks for image recognition, and complex data analysis pipelines. My expertise spans optimization algorithms, machine learning research, and applied AI projects.
         </p>
       </section>
 
+      <!-- Education -->
       <section id="education" class="card">
         <h2>Education</h2>
         <ul>
-          <li>Ph.D., Computer Engineering — Karadeniz Technical University, Trabzon, Turkey, 2018</li>
+          <li>Ph.D., Computer Engineering — Karadeniz Technical University, Turkey, 2018</li>
           <li>Ph.D. (visiting student), Computer Engineering — Linnaeus University, Sweden, 2015</li>
           <li>M.S., Computer Science — Azad University, Sari, Iran, 2012</li>
           <li>B.S., Software Engineering — Mirdamad University of Gorgan, Iran, 2008</li>
         </ul>
       </section>
 
+      <!-- Academic Experience -->
       <section id="academic" class="card">
         <h2>Academic Experience & Research</h2>
         <div class="two-col">
@@ -92,34 +96,27 @@
           <div>
             <strong>Research & Teaching</strong>
             <ul>
-              <li>Research combining reinforcement learning and optimization algorithms for national projects</li>
-              <li>Machine learning research for natural language processing</li>
+              <li>Reinforcement learning and optimization algorithms for national projects</li>
+              <li>Machine learning for natural language processing</li>
               <li>Published in reputable CS journals & conferences</li>
-              <li>Taught AI and ML courses at undergraduate and graduate levels/li>
-              <li>Developed novel neural network architectures for recommendation systems</li>
+              <li>Taught AI and ML at undergraduate and graduate levels</li>
+              <li>Developed neural network architectures for recommendation systems</li>
             </ul>
           </div>
         </div>
       </section>
 
+      <!-- Industry Experience -->
       <section id="industry" class="card">
         <h2>Industry Experience</h2>
         <p><strong>Data Scientist</strong>, Ab Bana Sanat Inc., Gorgan, Iran</p>
         <ul>
-          <li>Led a data science team designing predictive analytics models in finance</li>
-          <li>Implemented machine learning algorithms for personalized product recommendations</li>
+          <li>Led data science team designing predictive models in finance</li>
+          <li>Implemented ML algorithms for personalized recommendations</li>
         </ul>
       </section>
 
-      <section id="awards" class="card">
-        <h2>Honors &amp; Awards</h2>
-        <ul>
-          <li>Google Research Grant – Eczema.app (2025)</li>
-          <li>Full Scholarship from Turkey (2013–2018)</li>
-          <li>High Honor Student, PhD Level (2013–2018)</li>
-        </ul>
-      </section>
-
+      <!-- Skills & Certificates -->
       <section id="skills" class="card">
         <h2>Certificates & Skills</h2>
         <div class="two-col">
@@ -150,6 +147,7 @@
         </div>
       </section>
 
+      <!-- Courses -->
       <section id="courses" class="card">
         <h2>Courses Taught</h2>
         <div class="two-col">
@@ -176,12 +174,33 @@
         </div>
       </section>
 
-      <!-- ⭐⭐⭐ جدید: بخش تسلط زبان‌ها ⭐⭐⭐ -->
+      <!-- Languages -->
       <section id="languages" class="card">
         <h2>Language Proficiency</h2>
         <p><strong>Proficient in English, Turkish, and Persian.</strong></p>
       </section>
 
+      <!-- Honors & Awards -->
+      <section id="awards" class="card">
+        <h2>Honors &amp; Awards</h2>
+        <ul>
+          <li>Google Research Grant – Eczema.app (2025)</li>
+          <li>Full Scholarship from Turkey (2013–2018)</li>
+          <li>High Honor Student, PhD Level (2013–2018)</li>
+        </ul>
+      </section>
+
+      <!-- Sports Achievements -->
+      <section id="sports" class="card">
+        <h2>Sports Achievements</h2>
+        <ul>
+          <li>Masters Athlete, Turkey</li>
+          <li>High Jump: Gold Medalist</li>
+          <li>Long Jump: Silver Medalist</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
       <section id="contact" class="card">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:arefyelghi@topkapi.edu.tr" style="color:#000000; font-weight:600;">arefyelghi@topkapi.edu.tr</a></p>
@@ -189,9 +208,9 @@
         <p>Google Scholar: <a href="https://scholar.google.com/citations?user=XhsmWO4AAAAJ&hl=en" target="_blank" style="color:#000000; font-weight:600;">View my Google Scholar</a></p>
         <p>Location: Türkiye</p>
       </section>
-
     </div>
 
+    <!-- Footer -->
     <footer>
       © 2025 Aref Yelghi — Data Science & Machine Learning
     </footer>
