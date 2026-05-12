@@ -4,226 +4,456 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aref Yelghi — Personal Website</title>
-  <meta name="description" content="Aref Yelghi — Data Scientist / Machine Learning Researcher" />
+
+  <meta name="description" content="Aref Yelghi — Artificial Intelligence Researcher and Machine Learning Expert" />
+
   <style>
     :root{
-      --bg:#f6f8fb;
+      --bg:#f4f7fb;
       --card:#ffffff;
-      --accent:#6b8ef0;
-      --text:#000000;
-      --glass: rgba(99,102,241,0.08);
+      --accent:#4f6df5;
+      --text:#111111;
+      --soft:#6b7280;
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:var(--bg);color:var(--text);line-height:1.6}
-    .wrap{max-width:980px;margin:36px auto;padding:20px}
-    header{display:flex;gap:18px;align-items:center}
-    .avatar{width:96px;height:96px;border-radius:14px;background:linear-gradient(135deg,var(--glass),transparent);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
-    h1{margin:0;font-size:1.6rem;color:var(--text); font-weight:700;}
-    p.lead{margin:6px 0 0;color:var(--text); font-weight:600;}
-    nav.toc{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
-    nav.toc a{background:rgba(0,0,0,0.04);padding:8px 12px;border-radius:999px;text-decoration:none;color:var(--text);font-size:0.95rem; font-weight:600;}
-    .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:20px}
-    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,36,0.06);border:1px solid rgba(15,23,36,0.03)}
-    h2{margin-top:0;color:var(--accent);font-size:1.05rem; font-weight:700;}
-    ul{margin:8px 0 0;padding-left:18px; color:var(--text);}
-    li{margin-bottom:4px;}
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    pre{background:#0b1220;color:#e6eef6;padding:12px;border-radius:8px;overflow:auto}
-    footer{margin-top:22px;text-align:center;color:var(--text);font-size:0.9rem}
-    @media (max-width:800px){.two-col{grid-template-columns:1fr}}
+
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      font-family:Inter, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:30px 20px;
+    }
+
+    header{
+      background:white;
+      border-radius:18px;
+      padding:30px;
+      display:flex;
+      align-items:center;
+      gap:25px;
+      box-shadow:0 5px 18px rgba(0,0,0,0.06);
+    }
+
+    .profile img{
+      width:130px;
+      height:130px;
+      border-radius:18px;
+      object-fit:cover;
+    }
+
+    .header-text h1{
+      margin:0;
+      font-size:2rem;
+      color:var(--accent);
+    }
+
+    .header-text p{
+      margin-top:10px;
+      font-size:1.05rem;
+      color:var(--soft);
+      font-weight:600;
+    }
+
+    nav{
+      margin-top:25px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    nav a{
+      text-decoration:none;
+      background:white;
+      padding:10px 16px;
+      border-radius:999px;
+      color:var(--text);
+      font-weight:600;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:22px;
+      margin-top:25px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:25px;
+      border-radius:18px;
+      box-shadow:0 5px 18px rgba(0,0,0,0.06);
+    }
+
+    h2{
+      margin-top:0;
+      color:var(--accent);
+      font-size:1.3rem;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    ul{
+      padding-left:20px;
+    }
+
+    li{
+      margin-bottom:8px;
+    }
+
+    a{
+      color:var(--accent);
+    }
+
+    footer{
+      margin-top:35px;
+      text-align:center;
+      color:var(--soft);
+      padding-bottom:20px;
+    }
+
+    @media(max-width:800px){
+      .two-col{
+        grid-template-columns:1fr;
+      }
+
+      header{
+        flex-direction:column;
+        text-align:center;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <!-- Header -->
-    <header>
-      <div class="avatar">
-        <img src="profile.jpg" alt="Aref Yelghi" style="width:100%; height:100%; border-radius:14px; object-fit:cover;">
-      </div>
-      <div>
-        <h1>Aref Yelghi</h1>
-        <p class="lead">Data Analyst • Machine Learning & Optimization • FinTech</p>
-      </div>
-    </header>
 
-    <!-- Navigation -->
-    <nav class="toc">
-      <a href="#summary">Summary</a>
-      <a href="#education">Education</a>
-      <a href="#academic">Academic</a>
-      <a href="#industry">Industry</a>
-      <a href="#industry-new">Recent Industry</a>
-      <a href="#skills">Skills & Certificates</a>
-      <a href="#courses">Courses</a>
-      <a href="#languages">Languages</a>
-      <a href="#awards">Honors</a>
-      <a href="#sports">Sports</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<div class="container">
 
-    <div class="grid">
-      <!-- Summary -->
-      <section id="summary" class="card">
-        <h2>Summary</h2>
-        <p>
-          I am a data analyst and machine learning expert with extensive experience in financial technology (FinTech) and optimization. I have developed numerous predictive models, deep neural networks for image recognition, and complex data analysis pipelines. My expertise spans optimization algorithms, machine learning research, and applied AI projects.
-        </p>
-      </section>
-
-      <!-- Education -->
-      <section id="education" class="card">
-        <h2>Education</h2>
-        <ul>
-          <li>Ph.D., Computer Engineering — Karadeniz Technical University, Turkey, 2018</li>
-          <li>Ph.D. (visiting student), Computer Engineering — Linnaeus University, Sweden, 2015</li>
-          <li>M.S., Computer Science — Azad University, Sari, Iran, 2012</li>
-          <li>B.S., Software Engineering — Mirdamad University of Gorgan, Iran, 2008</li>
-        </ul>
-      </section>
-
-      <!-- Academic Experience -->
-      <section id="academic" class="card">
-        <h2>Academic Experience & Research</h2>
-        <div class="two-col">
-          <div>
-            <strong>Positions</strong>
-            <ul>
-              <li>Assistant Professor — Dept. of Computer Engineering, Istanbul Topkapı University (2021–Now)</li>
-              <li>Lecturer — Dept. of Computer Engineering, Istanbul Bilgi University (2023–2024)</li>
-              <li>Assistant Professor — Dept. of Computer Engineering, Avrasya University (2018–2021)</li>
-              <li>Lecturer — Azad University (2010–2011)</li>
-            </ul>
-          </div>
-          <div>
-            <strong>Research & Teaching</strong>
-            <ul>
-              <li>Reinforcement learning and optimization algorithms for national projects</li>
-              <li>Machine learning for natural language processing</li>
-              <li>Published in reputable CS journals & conferences</li>
-              <li>Taught AI and ML at undergraduate and graduate levels</li>
-              <li>Developed neural network architectures for recommendation systems</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Industry Experience -->
-      <section id="industry" class="card">
-        <h2>Industry Experience</h2>
-        <p><strong>Data Scientist</strong>, Ab Bana Sanat Inc., Gorgan, Iran</p>
-        <ul>
-          <li>Led data science team designing predictive models in finance</li>
-          <li>Implemented ML algorithms for personalized recommendations</li>
-        </ul>
-      </section>
-
-      <!-- Recent Industry Experience -->
-      <section id="industry-new" class="card">
-        <h2>Recent Industry Experience</h2>
-        <p><strong>Artificial Intelligence Researcher</strong>, NellaDerm — Full-time (Nov 2024 - Present)</p>
-        <ul>
-          <li>Working remotely on AI research projects and model development</li>
-        </ul>
-      </section>
-
-      <!-- Skills & Certificates -->
-      <section id="skills" class="card">
-        <h2>Certificates & Skills</h2>
-        <div class="two-col">
-          <div>
-            <strong>Certificates</strong>
-            <ul>
-              <li>Neural Networks and Deep Learning</li>
-              <li>MLOps: Getting Started</li>
-              <li>Improving Deep Neural Networks</li>
-              <li>Building Recommender Systems</li>
-              <li>Generative AI with LLMs</li>
-              <li>Generative AI with RAG & LangChain</li>
-              <li>DevOps, DataOps, MLOps</li>
-            </ul>
-          </div>
-          <div>
-            <strong>Technical Skills</strong>
-            <ul>
-              <li>Programming: C++, Java, Python (Django)</li>
-              <li>ML & DL: Pandas, NumPy, SciPy, Scikit-learn, TensorFlow, Keras, PyTorch</li>
-              <li>Optimization, Metaheuristics, Neuro-Fuzzy Systems</li>
-              <li>Database: SQL</li>
-              <li>Cloud: AWS, GCP (Vertex AI)</li>
-              <li>Deployment: Docker, Kubernetes, REST</li>
-              <li>MLOps: MLflow, CI/CD, RAG pipelines</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Courses -->
-      <section id="courses" class="card">
-        <h2>Courses Taught</h2>
-        <div class="two-col">
-          <div>
-            <strong>Undergraduate</strong>
-            <ul>
-              <li>Operating System</li>
-              <li>Computer Network</li>
-              <li>Algorithm Analysis</li>
-              <li>Optimization</li>
-              <li>Programming Language</li>
-              <li>Machine Learning</li>
-              <li>Artificial Intelligence</li>
-              <li>Programming II</li>
-            </ul>
-          </div>
-          <div>
-            <strong>Postgraduate</strong>
-            <ul>
-              <li>Advanced AI Topics</li>
-              <li>Expert Systems & Fuzzy Systems</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Languages -->
-      <section id="languages" class="card">
-        <h2>Language Proficiency</h2>
-        <p><strong>Proficient in English, Turkish, and Persian.</strong></p>
-      </section>
-
-      <!-- Honors & Awards -->
-      <section id="awards" class="card">
-        <h2>Honors &amp; Awards</h2>
-        <ul>
-          <li>Google Research Grant – Eczema.app (2025)</li>
-          <li>Full Scholarship from Turkey (2013–2018)</li>
-          <li>High Honor Student, PhD Level (2013–2018)</li>
-        </ul>
-      </section>
-
-      <!-- Sports Achievements -->
-      <section id="sports" class="card">
-        <h2>Sports Achievements</h2>
-        <ul>
-          <li>Masters Athlete, Turkey</li>
-          <li>High Jump: Gold Medalist</li>
-          <li>Long Jump: Silver Medalist</li>
-        </ul>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="card">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:arefyelghi@topkapi.edu.tr" style="color:#000000; font-weight:600;">arefyelghi@topkapi.edu.tr</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/aref-yelghi-75b02997" target="_blank" style="color:#000000; font-weight:600;">Visit my LinkedIn profile</a></p>
-        <p>Google Scholar: <a href="https://scholar.google.com/citations?user=XhsmWO4AAAAJ&hl=en" target="_blank" style="color:#000000; font-weight:600;">View my Google Scholar</a></p>
-        <p>Location: Türkiye</p>
-      </section>
+  <!-- HEADER -->
+  <header>
+    <div class="profile">
+      <img src="profile.jpg" alt="Aref Yelghi">
     </div>
 
-    <!-- Footer -->
-    <footer>
-      © 2025 Aref Yelghi — Data Science & Machine Learning
-    </footer>
+    <div class="header-text">
+      <h1>Dr. Aref Yelghi</h1>
+      <p>
+        Artificial Intelligence Researcher • Machine Learning Expert • Optimization & Generative AI
+      </p>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#summary">Summary</a>
+    <a href="#education">Education</a>
+    <a href="#academic">Academic</a>
+    <a href="#research">Research</a>
+    <a href="#grants">Grants</a>
+    <a href="#skills">Skills</a>
+    <a href="#courses">Courses</a>
+    <a href="#awards">Awards</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="grid">
+
+    <!-- SUMMARY -->
+    <section id="summary" class="card">
+      <h2>Professional Summary</h2>
+
+      <p>
+        I am an Artificial Intelligence researcher and Assistant Professor with expertise in
+        machine learning, deep learning, optimization algorithms, computer vision, and generative AI.
+        My research focuses on metaheuristic optimization, neural networks, diffusion models,
+        reinforcement learning, and multi-objective optimization for intelligent systems.
+      </p>
+
+      <p>
+        I have published scientific papers in international journals and conferences, and I actively
+        work on AI-driven projects involving recommendation systems, image generation,
+        latent-space optimization, and medical AI applications.
+      </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="card">
+      <h2>Education</h2>
+
+      <ul>
+        <li>
+          Ph.D. in Computer Engineering — Karadeniz Technical University, Türkiye (2018)
+        </li>
+
+        <li>
+          Visiting Ph.D. Researcher — Linnaeus University, Sweden (2015)
+        </li>
+
+        <li>
+          M.Sc. in Computer Science — Azad University, Iran (2012)
+        </li>
+
+        <li>
+          B.Sc. in Software Engineering — Mirdamad University, Iran (2008)
+        </li>
+      </ul>
+    </section>
+
+    <!-- ACADEMIC -->
+    <section id="academic" class="card">
+      <h2>Academic Experience</h2>
+
+      <div class="two-col">
+
+        <div>
+          <h3>Positions</h3>
+
+          <ul>
+            <li>
+              Assistant Professor — Istanbul Topkapı University (2021–Present)
+            </li>
+
+            <li>
+              Lecturer — Istanbul Bilgi University (2023–2024)
+            </li>
+
+            <li>
+              Assistant Professor — Avrasya University (2018–2021)
+            </li>
+
+            <li>
+              Lecturer — Azad University (2010–2011)
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Research Interests</h3>
+
+          <ul>
+            <li>Generative Artificial Intelligence</li>
+            <li>Multi-Objective Optimization</li>
+            <li>Deep Learning & Computer Vision</li>
+            <li>Neural Networks</li>
+            <li>Recommendation Systems</li>
+            <li>Metaheuristic Algorithms</li>
+            <li>Diffusion Models</li>
+            <li>Latent Space Optimization</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="card">
+      <h2>Selected Research Topics</h2>
+
+      <ul>
+        <li>
+          Survivor Optimizer for global optimization problems
+        </li>
+
+        <li>
+          Evolutionary latent optimization for GAN inversion
+        </li>
+
+        <li>
+          Multi-objective optimization for text-to-image diffusion models
+        </li>
+
+        <li>
+          Artificial intelligence systems for medical image analysis
+        </li>
+
+        <li>
+          Reinforcement learning and intelligent recommendation systems
+        </li>
+
+        <li>
+          Neuro-fuzzy and hybrid intelligent systems
+        </li>
+      </ul>
+    </section>
+
+    <!-- GRANTS -->
+    <section id="grants" class="card">
+      <h2>Funded Projects & Grants</h2>
+
+      <ul>
+
+        <li>
+          <strong>TÜBİTAK 1002-A Rapid Support Program Grant</strong><br>
+          Project No: 126E455<br>
+          <em>
+            Multi-Objective Optimization for Compositional Accuracy in Text-to-Image Models
+          </em><br>
+          Supported by TÜBİTAK Electrical, Electronics and Informatics Research Group (EEEAG), 2026.
+        </li>
+
+        <br>
+
+        <li>
+          Google Research Grant — Eczema.app (2025)
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card">
+      <h2>Technical Skills</h2>
+
+      <div class="two-col">
+
+        <div>
+
+          <h3>Programming</h3>
+
+          <ul>
+            <li>Python</li>
+            <li>C++</li>
+            <li>Java</li>
+            <li>SQL</li>
+          </ul>
+
+          <h3>Machine Learning</h3>
+
+          <ul>
+            <li>TensorFlow</li>
+            <li>PyTorch</li>
+            <li>Scikit-learn</li>
+            <li>Keras</li>
+          </ul>
+
+        </div>
+
+        <div>
+
+          <h3>Cloud & Deployment</h3>
+
+          <ul>
+            <li>AWS</li>
+            <li>Google Cloud Platform</li>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+          </ul>
+
+          <h3>AI Technologies</h3>
+
+          <ul>
+            <li>Diffusion Models</li>
+            <li>Large Language Models (LLMs)</li>
+            <li>MLOps</li>
+            <li>RAG Pipelines</li>
+          </ul>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COURSES -->
+    <section id="courses" class="card">
+      <h2>Courses Taught</h2>
+
+      <div class="two-col">
+
+        <div>
+          <ul>
+            <li>Artificial Intelligence</li>
+            <li>Machine Learning</li>
+            <li>Optimization Algorithms</li>
+            <li>Operating Systems</li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li>Computer Networks</li>
+            <li>Programming Languages</li>
+            <li>Algorithm Analysis</li>
+            <li>Expert Systems</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section id="awards" class="card">
+      <h2>Honors & Awards</h2>
+
+      <ul>
+        <li>
+          TÜBİTAK 1002-A Funded Research Project (2026)
+        </li>
+
+        <li>
+          Google Research Grant Award (2025)
+        </li>
+
+        <li>
+          Full Scholarship for Ph.D. Studies in Türkiye
+        </li>
+
+        <li>
+          High Honor Student — Ph.D. Program
+        </li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+
+      <p>
+        Email:
+        <a href="mailto:arefyelghi@topkapi.edu.tr">
+          arefyelghi@topkapi.edu.tr
+        </a>
+      </p>
+
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/aref-yelghi-75b02997" target="_blank">
+          Visit LinkedIn Profile
+        </a>
+      </p>
+
+      <p>
+        Google Scholar:
+        <a href="https://scholar.google.com/citations?user=XhsmWO4AAAAJ&hl=en" target="_blank">
+          View Google Scholar
+        </a>
+      </p>
+
+      <p>
+        Location: Istanbul, Türkiye
+      </p>
+    </section>
+
   </div>
+
+  <footer>
+    © 2026 Dr. Aref Yelghi — Artificial Intelligence & Machine Learning
+  </footer>
+
+</div>
+
 </body>
 </html>
